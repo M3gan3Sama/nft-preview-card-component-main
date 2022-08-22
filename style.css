@@ -193,7 +193,6 @@ hr {
     max-width: 327px;
     padding: 24px;
     margin: 24px;
-
     grid-template-rows: auto 1fr;
   }
 
@@ -208,6 +207,15 @@ hr {
 }
 
 @media (max-width: 320px) {
+  main {
+    height: auto;
+    grid-template-rows: auto;
+  }
+
+  .hero-txt {
+    gap: 1rem;
+  }
+
   .creator > p {
     font-size: 0.8rem;
   }
@@ -216,6 +224,10 @@ hr {
 @media (max-width: 280px) {
   h1 {
     font-size: 20px;
+  }
+
+  .hero-txt {
+    text-align: center;
   }
 
   .hero-txt > p {
