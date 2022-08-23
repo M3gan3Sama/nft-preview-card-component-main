@@ -86,9 +86,34 @@ a {
   transition: 200ms ease-in-out;
 }
 
-a:hover {
-  color: var(--cyan);
+@media (hover: hover) {
+  a:hover,
+  a:focus-visible {
+    color: var(--cyan);
+  }
+
+  .image-link:hover > .img-overlay,
+  .image-link:hover > .eye,
+  .image-link:focus-visible > .img-overlay,
+  .image-link:focus-visible > .eye {
+    opacity: 1;
+  }
 }
+
+@media (hover: none) {
+  .image-link:active > .img-overlay,
+  .image-link:active > .eye {
+    opacity: 1;
+  }
+
+  a:active {
+    color: var(--cyan);
+  }
+}
+/* a:hover,
+a:focus-visible {
+  color: var(--cyan);
+} */
 
 .image-link {
   position: relative;
@@ -131,10 +156,12 @@ a:hover {
   opacity: 0;
 }
 
-.image-link:hover > .img-overlay,
-.image-link:hover > .eye {
+/* .image-link:hover > .img-overlay,
+.image-link:hover > .eye,
+.image-link:focus-visible > .img-overlay,
+.image-link:focus-visible > .eye {
   opacity: 1;
-}
+} */
 
 .hero-txt {
   display: flex;
